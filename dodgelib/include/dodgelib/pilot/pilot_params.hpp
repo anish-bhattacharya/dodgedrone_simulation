@@ -57,6 +57,7 @@ class PilotParams : public ParameterBase {
 
   bool velocity_in_bodyframe_{true};
   Scalar takeoff_heigth_{1.0};
+  Scalar takeoff_y_{0.0};
   Scalar takeoff_threshold_{0.5};
   Scalar start_land_speed_{0.6};
   Scalar brake_deceleration_{5.0};

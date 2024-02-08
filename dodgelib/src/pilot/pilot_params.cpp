@@ -116,6 +116,7 @@ bool PilotParams::load(const Yaml& yaml) {
 
   yaml["velocity_in_bodyframe"].getIfDefined(velocity_in_bodyframe_);
   yaml["takeoff_height"].getIfDefined(takeoff_heigth_);
+  yaml["takeoff_y"].getIfDefined(takeoff_y_);
   yaml["takeoff_threshold"].getIfDefined(takeoff_threshold_);
   yaml["start_land_speed"].getIfDefined(start_land_speed_);
   yaml["brake_deceleration"].getIfDefined(brake_deceleration_);
@@ -260,6 +261,7 @@ std::ostream& operator<<(std::ostream& os, const PilotParams& params) {
   os << "velocity in bodyframe:        " << params.velocity_in_bodyframe_
      << '\n';
   os << "takeoff height:               " << params.takeoff_heigth_ << '\n';
+  os << "takeoff y:                    " << params.takeoff_y_ << '\n';
   os << "takeoff threshold:            " << params.takeoff_threshold_ << '\n';
   os << "start land speed:             " << params.start_land_speed_ << '\n';
   os << "brake deceleration:           " << params.brake_deceleration_ << '\n';

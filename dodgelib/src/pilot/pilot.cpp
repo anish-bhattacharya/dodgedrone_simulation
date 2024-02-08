@@ -123,6 +123,7 @@ bool Pilot::start() {
     logger_.info("Z-position smaller than takeoff height, taking off!");
     QuadState hover_state = state;
     hover_state.t += params_.takeoff_heigth_ / params_.start_land_speed_;
+    hover_state.p[1] = params_.takeoff_y_; // added y parameter
     hover_state.p[2] += params_.takeoff_heigth_;
     MinSnapTrajectory start_trajectory(curr_state, hover_state);
     if (!start_trajectory.valid()) {
